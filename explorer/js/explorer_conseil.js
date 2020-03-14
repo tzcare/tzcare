@@ -14,6 +14,7 @@ async function readTezosContract() {
 
     console.log(conseilResult.storage);
 
+    conseilResult.storage = conseilResult.storage.replace('"','');
     user.latitude = Number(conseilResult.storage.substring(0, 6));
     user.longitude = Number(conseilResult.storage.substring(6, 12));
     user.device = conseilResult.storage.substring(12, 16);
