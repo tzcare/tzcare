@@ -12,12 +12,11 @@ async function readTezosContract() {
 
     let conseilResult = await conseiljs.TezosConseilClient.getAccount(conseilServer, conseilServer.network, contractAddress);
 
-    let device_alert = conseilResult.storage;
-    console.log(device_alert);
+    console.log(conseilResult.storage);
 
-    user.latitude = Number(device_alert.substring(0, 6));
-    user.longitude = Number(device_alert.substring(6, 12));
-    user.device = device_alert.substring(12, 16);
+    user.latitude = Number(conseilResult.storage.substring(0, 6));
+    user.longitude = Number(conseilResult.storage.substring(6, 12));
+    user.device = conseilResult.storage.substring(12, 16);
 
     console.log(user);
 
