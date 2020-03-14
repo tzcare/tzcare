@@ -8,7 +8,7 @@ async function readTezosContract() {
         network: 'babylonnet'
     }
 
-    const contractAddress = 'KT1Q24KhKh7ZkEnYtJpiuHoEkP5EvVBr4Giw';
+    const contractAddress = 'KT1LrAq2YYw9z8M5ZMEvHe7fZGC673HaJyix';
 
     let conseilResult = await conseiljs.TezosConseilClient.getAccount(conseilServer, conseilServer.network, contractAddress);
 
