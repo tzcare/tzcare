@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tezos Care Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/explorer.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+
+            <strong class="navbar-item" style="font-size: 2em;">ꜩ<span style="color: hsl(348, 100%, 61%)">Care</span>
+                <span style="color: white">Explorer</span>
+                <span class="tag is-light is-normal" style="position: relative; top: 25px">Beta</span>
+            </strong>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+
+        <div id="navbarBasicExample" class="navbar-menu">
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <button id="sync" class="button is-light">
+                            <span class="icon">
+                                <i class="fas fa-sync"></i>
+                            </span>
+                            <span>Sync</span>
+                        </button>
+                        <button id="show" class="button is-danger">
+                            <strong>Show Route</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <footer class="footer has-text-white" style="margin-top: 1em;">
+        <div class="content has-text-centered">
+            <p>
+                Copyright © 2020 | <strong class="has-text-white">ꜩCare</strong>. All rights reserved. <br> <br>
+                <a target="_blank" href="https://github.com/TedNIVAN/tzcare/tree/master/explorer" class="button">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"
+            aria-hidden="true"></i></button>
+
+    <script src="js/explorer_common.js"></script>
+    <script src="js/explorer_map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1330zi0yKeKpzLSQ6N4Mg2WepXJzyhLA&callback=initMap">
+        </script>
+    <script src="https://cdn.jsdelivr.net/gh/cryptonomic/conseiljs/dist-web/conseiljs.min.js"
+        integrity="sha384-1Lpjkva0cskGzGmrvU+WIbzNk24LwcaEFgsukzbI5wTl7T6kom1UA4DKS/oxtaqr"
+        crossorigin="anonymous"></script>
+    <script src="js/explorer_conseil.js"></script>
+</body>
+
+</html>
