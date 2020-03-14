@@ -1,0 +1,65 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #0e1626;
+}
+
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #0e1626;
+}
+
+.navbar-menu{
+    background-color: #0e1626;  
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: hsl(348, 100%, 61%);
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    font-size: 1em;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 550px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.navbar {
+    background-color: #0e1626;
+}
+
+section {
+    background-color: #0e1626;
+}
+
+.footer {
+    background-color: #0e1626;
+}
